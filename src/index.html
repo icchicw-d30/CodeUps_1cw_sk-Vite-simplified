@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <!-- noindex nofollow -->
+  <meta name="robots" content="noindex, nofollow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=no" />
+  <!-- meta情報 -->
+  <!-- title -->
+  <title>CodeUps_1cw_sk-Vite-simplified</title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <!-- ogp -->
+  <meta property="og:title" content="" />
+  <meta property="og:type" content="" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="" />
+  <meta property="og:site_name" content="" />
+  <meta property="og:description" content="" />
+  <!-- favicon -->
+  {{> _favicon}}
+  <!-- CSS -->
+  <link rel="stylesheet" href="./scss/style.scss" />
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <!-- JavaScript -->
+  <script type="module" src="./js/main.js"></script>
+  <script defer src="./assets/js/hige.js"></script>
+</head>
+
+<body>
+  {{> header}}
+
+  <section>
+    <div class="inner">
+
+      <div id="app"></div>
+      <p class="test">変更のテスト</p>
+      <img src="./assets/images/hoge.jpg" alt="">
+      <img src="./images/dummy.jpg" alt="">
+
+      <p>↓↓ボタン↓↓</p>
+      <%- include('./components/_c-btn.html',{link:"google.co.jp", text:"ボタンです"}) %>
+
+        <p class="">タイトル => {{title}}</p>
+
+        <div class="space"></div>
+
+        <% const domain2 = "example.com" %>
+          <%= domain2 %>
+
+            <div class="space"></div>
+
+            <h3>handlebars内で定義した変数</h3>
+            <h3>タイトル => {{contextTtl}}</h3>
+            {{#with contextAry}}
+            <p>{{ary01}}</p>
+            <p>{{ary02}}</p>
+            <p>{{ary03}}</p>
+            {{/with}}
+
+            <div class="space"></div>
+
+            <h3>momoclo</h3>
+            {{#each momoclo}}
+            <p>{{firstname}}：{{lookup ../color firstname}}</p>
+            {{/each}}
+
+            <div class="space"></div>
+
+            <a class="test" href="./hoge.html">hoge.htmlへ</a>
+
+    </div>
+  </section>
+</body>
+
+</html>

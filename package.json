@@ -1,0 +1,32 @@
+{
+  "name": "CodeUps_1cw_sk-Vite-simplified",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build && prettier --write dist/**/*.html && esbuild src/public/assets/js/*.js --bundle --minify --outdir=dist/assets/js/",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^4.1.3",
+    "autoprefixer": "^10.4.7",
+    "css-declaration-sorter": "^6.3.0",
+    "postcss": "^8.4.14",
+    "postcss-normalize-charset": "^5.1.0",
+    "postcss-sort-media-queries": "^4.2.1",
+    "prettier": "^2.7.1",
+    "sass": "^1.53.0",
+    "vite": "^2.9.9",
+    "vite-plugin-ejs-engine": "^1.0.4",
+    "vite-plugin-handlebars": "^1.6.0",
+    "vite-plugin-imagemin": "^0.4.6",
+    "vite-plugin-sass-glob-import": "^1.3.0"
+  },
+  "browserslist": [
+    "last 3 versions",
+    "> 5%",
+    "iOS >= 9.0",
+    "Android >= 5",
+    "Firefox ESR"
+  ]
+}

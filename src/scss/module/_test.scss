@@ -1,0 +1,9 @@
+@use '../global' as *;
+@use "sass:math";
+@use "sass:color";
+
+.test {
+  font-size: rem(20);
+  background-color: $black;
+  color: $white;
+}

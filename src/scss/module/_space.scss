@@ -1,0 +1,7 @@
+@use '../global' as *;
+@use "sass:math";
+@use "sass:color";
+
+.space {
+  margin-top: rem(40);
+}
